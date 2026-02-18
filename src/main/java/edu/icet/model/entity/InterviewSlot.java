@@ -12,6 +12,17 @@ import lombok.*;
 @Builder
 public class InterviewSlot {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
+    private String time; // e.g., "09:00 AM"
+
+    @Enumerated(EnumType.STRING)
+    private InterviewSlotDTO.SlotType slotType;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "booking_id", referencedColumnName = "id")
+    private Booking booking;
 
 }

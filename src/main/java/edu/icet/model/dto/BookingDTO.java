@@ -10,6 +10,8 @@ import lombok.*;
 @Builder
 public class BookingDTO {
 
-
+    private String title;
+    private String candidate;
+    private String interviewer;
 
 }

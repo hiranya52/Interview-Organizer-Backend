@@ -10,6 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 @Builder
+@Entity
 public class InterviewSlot {
 
     @Id
